@@ -5,5 +5,3 @@ Revenim la tema - problema cu listele
 Flex-basis cu flex-grow
 
 The Fast Forward - lasam pentru alta data
-
-JS Basics-HandsOnFile - continuam de aici
