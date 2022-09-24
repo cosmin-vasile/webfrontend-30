@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+      *, *::after, *::before {
+        box-sizing: border-box;
+      }
+
+      div {
+        background-color: gray;
+      }
+
+      .extraClass {
+        background-color: aqua;
+      }
+
+      .parent {
+        background-color: blue;
+        width: 200px;
+        height: 100px;
+      }
+
+      .parent .child  {
+        background-color: red;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div>Div</div>
+    <p>Paragraph</p>
+    <a href="#">Link</a>
+
+    <div class="parent">
+      <div class="child extraClass">Child div</div>
+    </div>
+  </body>
+</html>

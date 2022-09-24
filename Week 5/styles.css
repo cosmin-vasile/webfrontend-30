@@ -1,0 +1,28 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+.flexgrow-container {
+  display: flex;
+  border: 1px solid red;
+  width: 700px;
+  height: 300px;
+}
+
+.flexgrow-container > div {
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+.flexshrink-container {
+  display: flex;
+  border: 1px solid red;
+  width: 700px;
+  height: 300px;
+}
+
+.flexshrink-container > div {
+  border: 1px solid black;
+}

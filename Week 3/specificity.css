@@ -1,0 +1,12 @@
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.my-container a {
+  color: red;
+}

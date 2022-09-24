@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 5</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script name="script-link" src="./nested-pattern.js"></script>
+    <script name="script-link" src="./find-element.js"></script>
+    <script src="./functions.js"></script>
+    <script src="./mainApp.js"></script>
+  </head>
+  <body id="my-body" class="my-body-class">
+    <div id="myid">
+      <div class="myclass">
+        <p>P1</p>
+        <p>P2<a href="#" title="My link title">My Link</a></p>
+        <p>P3</p>
+        <p>P4</p>
+        <button id="btn">Click me!</button>
+      </div>
+    </div>
+    <script>
+      // window.addEventListener("load", function (event) {
+      //   console.log("All resources finished loading!");
+      // });
+      document.addEventListener("DOMContentLoaded", function (event) {
+        console.log("DOM fully loaded and parsed");
+        initMainApp();
+      });
+    </script>
+  </body>
+</html>

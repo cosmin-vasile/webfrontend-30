@@ -1,0 +1,63 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.main-header > * {
+  border: 1px solid blue;
+}
+
+.logo {
+  font-size: 100px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav ul li a {
+  display: block;
+  width: 100px;
+  height: 40px;
+  text-decoration: none;
+  color: coral;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid yellow;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.main-nav ul li a:hover {
+  background-color: aquamarine;
+}
+
+.photo-info {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
+
+div + p {
+  color: red;
+}
+
+section p + footer {
+  color: red;
+}
+
+section.tilda p ~ footer {
+  color: red;
+}
+
+[data-id="65987"] {
+  
+}

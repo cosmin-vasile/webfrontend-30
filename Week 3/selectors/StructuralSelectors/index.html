@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .example1 p:first-child {
+        background-color: red;
+      }
+
+      .example2 div:last-child {
+        background-color: blue;
+      }
+
+      .example3 p:only-child {
+        background-color: brown;
+      }
+
+      .example4 p:nth-child(2) {
+        background-color: aquamarine;
+      }
+
+      .example5 p:first-of-type {
+        background-color: blueviolet;
+      }
+
+      .example6 p:nth-of-type(2) {
+        background-color: darkgoldenrod;
+      }
+
+      .example7 p:nth-last-of-type(1) {
+        background-color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example1">
+      <p data-paragraph="1">
+        Paragraph #1
+        <p>Paragraph #11</p>
+      </p>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+    </div>
+
+    <div class="example2">
+      <div data-paragraph="1">
+        Paragraph #1
+      </div>
+
+      <div data-paragraph="2">
+        Paragraph #2
+        <a>Link</a>
+        <span>Text</span>
+        <div>Div</div>
+      </div>
+    </div>
+
+    <div class="example3">
+      <p data-paragraph="1">
+        Paragraph #1
+        <p>Paragraph #11</p>
+      </p>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+    </div>
+
+    <div class="example3">
+      <p data-paragraph="1">
+        Paragraph #1
+      </p>
+    </div>
+
+    <div class="example4">
+      <p data-paragraph="1">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="3">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example5">
+      <div>
+        Div
+      </div>
+      <p data-paragraph="1">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="3">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example6">
+      <div>
+        Div 1
+      </div>
+      <p data-paragraph="1">
+        Paragraph #1
+      </p>
+
+      <div>
+        Div 2
+      </div>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+
+      <div>
+        Div 3
+      </div>
+
+      <p data-paragraph="3">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example7">
+      <div>
+        Div 1
+      </div>
+      <p data-paragraph="1">
+        Paragraph #1
+      </p>
+
+      <div>
+        Div 2
+      </div>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+
+      <div>
+        Div 3
+      </div>
+
+      <p data-paragraph="3">
+        Paragraph #3
+      </p>
+    </div>
+
+    <!-- <div class="example2">
+      <p data-paragraph="1">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="2">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="22">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example3">
+      <p data-paragraph="first">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="second">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="second third forth">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example4">
+      <p data-paragraph="first">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="second-test third">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="third second-test">
+        Paragraph #22
+      </p>
+
+      <p data-paragraph="second">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example5">
+      <p data-paragraph="first">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="first second third">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="second third">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example6">
+      <p data-paragraph="ird second">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="first second third">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="second third">
+        Paragraph #3
+      </p>
+    </div>
+
+    <div class="example7">
+      <p data-paragraph="second">
+        Paragraph #1
+      </p>
+
+      <p data-paragraph="first second third">
+        Paragraph #2
+      </p>
+
+      <p data-paragraph="thisecth">
+        Paragraph #3
+      </p>
+    </div> -->
+
+  </body>
+</html>

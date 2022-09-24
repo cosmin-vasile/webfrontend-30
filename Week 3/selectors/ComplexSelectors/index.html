@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .example1 div > p {
+        background-color: red;
+      }
+
+      .example2 div + p {
+        background-color: blue;
+      }
+
+      .example3 div ~ p {
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="example1">
+      <div>
+        <span>
+          <p>Inner Paragraph</p>
+        </span>
+        <p>
+          Paragraph #1
+        </p>
+        <p>
+          Paragraph #2
+        </p>
+        <p>
+          Paragraph #3
+        </p>
+      </div>
+    </div>
+
+    <div class="example2">
+      <div>
+        <p>
+          Paragraph #1
+        </p>
+        <p>
+          Paragraph #2
+        </p>
+        <p>
+          Paragraph #3
+        </p>
+      </div>
+      <p>
+        Targeted Paragraph #1
+      </p>
+      <p>
+        Targeted Paragraph #2
+      </p>
+    </div>
+
+    <div class="example3">
+      <div>
+        <p>
+          Paragraph #1
+        </p>
+        <p>
+          Paragraph #2
+        </p>
+        <p>
+          Paragraph #3
+        </p>
+      </div>
+      <p>
+        Targeted Paragraph #1
+      </p>
+      <p>
+        Targeted Paragraph #2
+      </p>
+    </div>
+  </body>
+</html>

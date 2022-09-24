@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        border: 1px solid red;
+        position: relative;
+        margin-left: 50px;
+      }
+      div::after {
+        content: '*';
+        position: absolute;
+        left: -50px;
+      }
+
+      div::before {
+        content: ' ';
+        border: 1px solid green;
+        position: absolute;
+      }
+
+      div::first-line {
+        color: brown;
+      }
+
+      div::first-letter {
+        color: blue;
+      }
+
+      div::selection {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>Paragraph #1 Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1Paragraph #1</div>
+    <div>Paragraph #2</div>
+    <div>Paragraph #3</div>
+
+  </body>
+</html>
