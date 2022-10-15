@@ -32,22 +32,23 @@ function runPostsApp() {
 
   function renderPostList(posts) {
     posts.forEach(function (post) {
-      var postDiv = createPost(post.title, post.body);
+      var postDiv = createPost(post);
       if (postDiv) {
         postsContainerEl.appendChild(postDiv);
       }
     });
   }
 
-  function createPost(title, body) {
+  function createPost(post) {
     var div = document.createElement("div");
+    //post.id
     div.innerHTML =
       "<div class='post-title'>" +
       "<h2>" +
-      title +
+      post.title +
       "</h2>" +
       "</div><p class='post-body'>" +
-      body +
+      post.body +
       "</p>";
 
     return div;
