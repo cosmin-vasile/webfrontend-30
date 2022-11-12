@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <script>
+    function onPClick(event) {
+      console.log("p", event.target);
+      console.log("p", event.currentTarget);
+    }
+
+    function onDivClick(event) {
+      console.log("div", event.target);
+      console.log("div", event.currentTarget);
+      event.stopPropagation();
+    }
+
+    function onFormClick(event) {
+      console.log("form", event.target);
+      console.log("form", event.currentTarget);
+    }
+  </script>
+</head>
+<body>
+  <style>
+    body * {
+      margin: 10px;
+      border: 1px solid blue;
+    }
+  </style>
+  <form onclick="onFormClick(event)">
+    FORM
+    <div onclick="onDivClick(event)">
+      DIV
+      <p onclick="onPClick(event)">P</p>
+    </div>
+  </form>
+</body>
