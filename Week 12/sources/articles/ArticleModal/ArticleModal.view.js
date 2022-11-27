@@ -1,30 +1,44 @@
-function ArticleModalView() {
-  this.model = null;
-  View.call(this);
+class ArticleModalView extends View {
+  model = null;
 
-  return this.init();
+  static articleModalEl = "article-modal";
+
+  constructor(BaseModal) {
+    super();
+
+    this.modal = BaseModal;
+    this.htmlEl = document.querySelector("html");
+    this.modalsContainer = document.querySelector("#modals-container");
+    this.articleModalContainer = document.querySelector(
+      `#${ArticleModalView.articleModalEl}`
+    );
+
+    return this.init();
+  }
+
+  init = async function () {
+    this.model = await new ArticleModalModel().init();
+    const templateElement = this.createTemplateElement(
+      "article-modal-template",
+      this.model.templateContent
+    );
+
+    this.renderModal(templateElement);
+
+    return this;
+  };
+
+  renderModal(templateElement) {
+    if (!this.articleModalContainer) {
+      const modalTemplateElement =
+        templateElement.content.cloneNode(true).firstElementChild;
+      modalTemplateElement.setAttribute("id", ArticleModalView.articleModalEl);
+      this.modalsContainer.appendChild(modalTemplateElement);
+      this.articleModalContainer = modalTemplateElement;
+    }
+
+    this.modal.init(
+      document.querySelector(`#${ArticleModalView.articleModalEl}`)
+    );
+  }
 }
-
-ArticleModalView.prototype = Object.create(View.prototype);
-
-ArticleModalView.prototype.init = async function () {
-  this.model = await new ArticleModalModel().init();
-  const templateElement = this.createTemplateElement(
-    "article-modal-template",
-    this.model.templateContent
-  );
-
-  return this;
-};
-
-ArticleModalView.prototype.show = function () {
-  console.log("show");
-  //if modal already in dom and has hidden - remove class hidden
-  //if no modal exists in dom, use the template to add the modals elements to dom
-  //and make it visible
-};
-
-ArticleModalView.prototype.hide = function () {
-  console.log("hide");
-  //remove modal class hidden
-};

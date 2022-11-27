@@ -9,8 +9,17 @@ App.prototype.init = async function () {
   const ArticleList = new ArticleListView(ArticleItem);
   console.log(ArticleList);
   const createArticleElement = document.querySelector("#create-new-article");
-  const Modal = await new ArticleModalView();
+
+  const onSubmit = (title, description) => {
+    console.log("clicked on modal submit button");
+    ArticleList.model.createNewArticle({
+      title,
+      description,
+    });
+  };
+  const BaseModal = new Modal(onSubmit, "Create new article", "Create");
+  await new ArticleModalView(BaseModal);
   createArticleElement.addEventListener("click", () => {
-    Modal.show();
+    BaseModal.show();
   });
 };
