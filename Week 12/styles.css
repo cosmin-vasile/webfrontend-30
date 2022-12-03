@@ -27,3 +27,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.article-modal label {
+  display: block;
+}
+
+.article-modal input {
+  width: 100%;
+}
+
+.article-modal textarea {
+  width: 100%;
+  height: 60px;
+}

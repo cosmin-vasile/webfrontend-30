@@ -16,33 +16,39 @@ class ArticleListView extends View {
       "article-list-template",
       this.model.templateContent
     );
+    this.listElement =
+      templateElement.content.cloneNode(true).firstElementChild;
     //adds the template into dom
-    this.createListElements(templateElement);
+    this._createListElements();
   };
 
   rerender() {
     //recreate list of elements
+    this.blogListContainer.innerHTML = "";
+    this._createListElements();
   }
 
-  renderNewArticle() {
+  renderNewArticle(article) {
     //render only the new article elements
-    //const articleItemElement = this.ArticleItem.render(article);
+    const articleItemElement = this.ArticleItem.render(article);
+    this.listElement.insertBefore(
+      articleItemElement,
+      this.listElement.firstChild
+    );
   }
 
-  createListElements = function (templateElement) {
+  _createListElements = function () {
     const { articleList } = this.model;
-    const listElement =
-      templateElement.content.cloneNode(true).firstElementChild;
 
     articleList.forEach((article) => {
       //for each article in the array
       //use instance of the articleItem to render the list item
       const articleItemElement = this.ArticleItem.render(article);
       //add to the dom list the generated dom list item element
-      listElement.appendChild(articleItemElement);
+      this.listElement.appendChild(articleItemElement);
     });
 
     //add to dom the list with all list items in the dom
-    this.blogListContainer.appendChild(listElement);
+    this.blogListContainer.appendChild(this.listElement);
   };
 }

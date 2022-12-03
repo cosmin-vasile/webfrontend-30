@@ -6,6 +6,9 @@ class Modal {
   submitButton = null;
   modalEl = null;
 
+  titleInput = null;
+  descrInput = null;
+
   constructor(onSubmit, title, submitButtonLabel) {
     this.onSubmit = onSubmit;
     this.title = title;
@@ -15,6 +18,10 @@ class Modal {
   init(modalEl) {
     this.modalEl = modalEl;
     this.htmlEl = document.querySelector("html");
+
+    this.titleInput = document.querySelector("#article-modal-title");
+    this.descrInput = document.querySelector("#article-modal-descr");
+
     this.cancelButton = document.querySelector("#article-modal-cancel");
     this.cancelButton.addEventListener(
       "click",
@@ -44,14 +51,19 @@ class Modal {
     this.modalEl.classList.add("hidden");
   }
 
+  clearInputs() {
+    this.titleInput.value = "";
+    this.descrInput.value = "";
+  }
+
   _onCancelButton() {
+    this.clearInputs();
     this.hide();
   }
 
   _onSubmitButton() {
-    const articleTitle = "";
-    const articleDescription = "";
-    this.onSubmit(articleTitle, articleDescription);
+    this.onSubmit(this.titleInput.value, this.descrInput.value);
     this.hide();
+    this.clearInputs();
   }
 }

@@ -20,8 +20,10 @@ class ArticleItemView extends View {
     //this.templateElement is the dom element <template>
     const clonedElement = this.templateElement.content.cloneNode(true);
     const element = clonedElement.firstElementChild;
-    const { title } = article;
+    const { id, title, description } = article;
+    element.setAttribute("data-id", id);
     element.querySelector("h2").innerText = title;
+    element.querySelector("p").innerText = description;
 
     return element;
   };
