@@ -1,0 +1,42 @@
+header {
+  height: 70px;
+  background: cadetblue;
+}
+
+.content {
+  display: flex;
+  min-height: 500px;
+}
+
+sidebar {
+  min-width: 200px;
+  background: thistle;
+}
+
+main {
+  background: turquoise;
+  width: 100%;
+  min-width: 300px;
+  overflow: auto;
+}
+
+footer {
+  height: 50px;
+  background: gainsboro;
+}
+
+.table {
+  width: 500px;
+  height: 500px;
+  background: gray;
+}
+
+img {
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  sidebar {
+    display: none;
+  }
+}

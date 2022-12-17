@@ -1,0 +1,13 @@
+.main-container {
+  border: 1px solid black;
+}
+
+header,
+footer {
+  border: 1px solid black;
+}
+
+img {
+  width: 100%;
+  min-width: 100px;
+}
